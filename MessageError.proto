@@ -1,0 +1,5 @@
+message MessageError
+{
+    required int32  Code    = 1;
+    required string Message = 2;
+}

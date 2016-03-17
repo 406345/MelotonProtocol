@@ -1,0 +1,5 @@
+message MessageOpenFile
+{
+    required string Path    = 1;
+    required int32  Mode    = 2;
+}

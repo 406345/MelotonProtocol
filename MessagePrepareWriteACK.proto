@@ -1,0 +1,8 @@
+import "MessageBlockMeta.proto";
+
+message MessagePrepareWriteACK
+{
+    required int64            ClientId = 1;
+    required string           Token    = 2;
+    required MessageBlockMeta Block    = 3;
+}

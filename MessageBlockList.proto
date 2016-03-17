@@ -1,0 +1,10 @@
+message MessageBlockList
+{
+    required int32  BlockCount  = 1;
+    repeated string Token       = 2;
+    repeated string IP          = 3;
+    repeated int32  Port        = 4;
+    repeated int64  Size        = 5;
+    repeated int64  FileOffset  = 6;
+    repeated int64  PartId      = 7;
+}

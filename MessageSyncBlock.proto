@@ -1,0 +1,7 @@
+import "MessageBlockMeta.proto";
+
+message MessageSyncBlock
+{
+    required int64            BlockCount = 1;
+    repeated MessageBlockMeta Blocks     = 2;
+}

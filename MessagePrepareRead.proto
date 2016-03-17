@@ -1,0 +1,5 @@
+message MessagePrepareRead
+{
+    required int64 ClientId = 1;
+    required int64 Index    = 2;
+}

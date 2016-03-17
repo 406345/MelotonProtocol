@@ -1,0 +1,7 @@
+import "MessageBlockMeta.proto";
+
+message MessagePrepareReadACK
+{
+    required string             Token = 1;
+    required MessageBlockMeta   Block = 2;
+}

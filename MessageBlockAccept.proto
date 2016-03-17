@@ -1,0 +1,6 @@
+message MessageBlockAccept
+{
+    required string Token    = 1;
+    required int64  Size     = 2;
+    required int64  Checksum = 3;
+}

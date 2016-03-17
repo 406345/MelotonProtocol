@@ -1,0 +1,5 @@
+message MessagePrepareWrite
+{
+    required string ClientId = 1;
+    required int64  Index    = 2;
+}

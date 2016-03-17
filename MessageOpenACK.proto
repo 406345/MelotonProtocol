@@ -1,0 +1,11 @@
+import "MessageBlockList.proto";
+
+message MessageOpenACK
+{
+    optional int64              BlockCount  = 1;
+    optional int64              FileSize    = 2;
+    optional string             Token       = 3;
+    optional MessageBlockList   List        = 4;
+    required int32              Code        = 5;
+    required string             Message     = 6;
+}

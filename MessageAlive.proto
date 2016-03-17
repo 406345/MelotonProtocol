@@ -1,0 +1,6 @@
+message MessageAlive
+{
+    required int32 CPU        = 1;
+    required int64 Memory     = 2;
+    required int64 BlockCount = 3;
+}
