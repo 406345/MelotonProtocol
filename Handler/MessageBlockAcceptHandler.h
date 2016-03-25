@@ -1,6 +1,6 @@
 /***********************************************************************************
-This file is part of Project for MaratonServant
-For the latest info, see  https://github.com/Yhgenomics/MaratonServant.git
+This file is part of Project for Meloton
+For the latest info, see  https://github.com/Yhgenomics/MelotonNode.git
 Copyright 2016 Yhgenomics
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@ limitations under the License.
 /***********************************************************************************
 * Description   : MessageBlockAccept handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
-* Date          : 2016-03-17
-* Modifed       : When      | Who       | What
+* Date          : 2016-03-25
+* Modifed       : 2016-03-25      | Shubo Yang      | Create
 ***********************************************************************************/
 
 #include <string>

@@ -5,4 +5,6 @@ message MessagePrepareWriteACK
     required int64            ClientId = 1;
     required string           Token    = 2;
     required MessageBlockMeta Block    = 3;
+	optional string			  Address  = 4;
+	optional int32	          Port     = 5;
 }

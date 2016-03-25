@@ -1,7 +1,6 @@
-import "MessageBlockMeta.proto";
 
 message MessagePrepareReadACK
 {
-    required string             Token = 1;
-    required MessageBlockMeta   Block = 2;
+    required string   Token = 1;
+	required int64	  ClientId = 2;
 }
