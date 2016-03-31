@@ -1,10 +1,10 @@
-import "MessageBlockMeta.proto";
-
 message MessagePrepareWriteACK
 {
-    required int64            ClientId = 1;
-    required string           Token    = 2;
-    required MessageBlockMeta Block    = 3;
-	optional string			  Address  = 4;
-	optional int32	          Port     = 5;
+    required int64            ClientId   = 1;
+    required string           Token      = 2;
+	required int64			  FileOffset = 3;
+	required int64  		  PartId     = 4;
+	required int64            Size       = 5;
+	optional string			  Address    = 6;
+	optional int32	          Port       = 7;
 }

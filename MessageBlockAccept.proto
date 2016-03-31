@@ -1,6 +1,8 @@
 message MessageBlockAccept
 {
-    required string Token    = 1;
-    required int64  Size     = 2;
-    required int64  Checksum = 3;
+    required string Token      = 1;
+    required int64  Size       = 2;
+	required int64  NextOffset = 3;
+	required int64  NextSize   = 4;
+    required int64  Checksum   = 5;
 }
