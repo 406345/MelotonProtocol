@@ -1,0 +1,6 @@
+message MessageTellACK
+{
+    required string Token      = 1;
+    required string Path       = 2;
+    required int64  Size       = 3; 
+}

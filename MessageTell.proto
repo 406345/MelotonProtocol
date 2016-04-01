@@ -1,0 +1,5 @@
+message MessageTell
+{
+    required string Token  = 1;
+    required string Path   = 2; 
+}

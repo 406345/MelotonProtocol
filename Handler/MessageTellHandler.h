@@ -14,7 +14,7 @@ limitations under the License.
 ***********************************************************************************/
 
 /***********************************************************************************
-* Description   : MessageError handler.
+* Description   : MessageTell handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
 * Date          : 2016-04-01
 * Modifed       : 2016-04-01      | Shubo Yang      | Create
@@ -22,9 +22,9 @@ limitations under the License.
 
 #include <string>
 #include <MRT.h>
-#include <MessageError.pb.h>
+#include <MessageTell.pb.h>
 
-static int MessageErrorHandler( MRT::Session * session , uptr<MessageError> message )
+static int MessageTellHandler( MRT::Session * session , uptr<MessageTell> message )
 {
     return 0;
 }

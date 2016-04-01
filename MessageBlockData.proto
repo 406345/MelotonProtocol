@@ -5,4 +5,5 @@ message MessageBlockData
     required int64  Size     = 3;
     required int64  Offset   = 4;
     required int64  Checksum = 5;
+	required bool	IsLast   = 6;
 }

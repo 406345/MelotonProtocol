@@ -16,8 +16,8 @@ limitations under the License.
 /***********************************************************************************
 * Description   : MessageBlockData handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
-* Date          : 2016-03-31
-* Modifed       : 2016-03-31      | Shubo Yang      | Create
+* Date          : 2016-04-01
+* Modifed       : 2016-04-01      | Shubo Yang      | Create
 ***********************************************************************************/
 
 #include <string>

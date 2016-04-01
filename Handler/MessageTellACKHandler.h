@@ -14,7 +14,7 @@ limitations under the License.
 ***********************************************************************************/
 
 /***********************************************************************************
-* Description   : MessageError handler.
+* Description   : MessageTellACK handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
 * Date          : 2016-04-01
 * Modifed       : 2016-04-01      | Shubo Yang      | Create
@@ -22,9 +22,9 @@ limitations under the License.
 
 #include <string>
 #include <MRT.h>
-#include <MessageError.pb.h>
+#include <MessageTellACK.pb.h>
 
-static int MessageErrorHandler( MRT::Session * session , uptr<MessageError> message )
+static int MessageTellACKHandler( MRT::Session * session , uptr<MessageTellACK> message )
 {
     return 0;
 }

@@ -1,6 +1,11 @@
 
 message MessagePrepareReadACK
 {
-    required string   Token = 1;
-	required int64	  ClientId = 2;
+    required int64            ClientId   = 1;
+    required string           Token      = 2;
+	required int64			  FileOffset = 3;
+	required int64  		  PartId     = 4;
+	required int64            Size       = 5;
+	optional string			  Address    = 6;
+	optional int32	          Port       = 7;
 }

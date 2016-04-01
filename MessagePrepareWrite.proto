@@ -2,7 +2,8 @@ message MessagePrepareWrite
 {
     required int64  ClientId   = 1;
     required int64  Index      = 2;
-	optional int64  FileOffset = 3;
-	optional int64  PartId	   = 4;
-	optional string Path       = 5;
+	required bool   IsNew	   = 3;
+	optional int64  FileOffset = 4;
+	optional int64  PartId	   = 5;
+	optional string Path       = 6;
 }
