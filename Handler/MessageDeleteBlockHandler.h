@@ -14,7 +14,7 @@ limitations under the License.
 ***********************************************************************************/
 
 /***********************************************************************************
-* Description   : MessageError handler.
+* Description   : MessageDeleteBlock handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
 * Date          : 2016-04-13
 * Modifed       : 2016-04-13      | Shubo Yang      | Create
@@ -22,9 +22,9 @@ limitations under the License.
 
 #include <string>
 #include <MRT.h>
-#include <MessageError.pb.h>
+#include <MessageDeleteBlock.pb.h>
 
-static int MessageErrorHandler( MRT::Session * session , uptr<MessageError> message )
+static int MessageDeleteBlockHandler( MRT::Session * session , uptr<MessageDeleteBlock> message )
 {
     return 0;
 }

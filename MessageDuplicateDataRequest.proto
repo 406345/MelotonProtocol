@@ -1,0 +1,8 @@
+message MessageDuplicateDataRequest
+{
+    required string Token        = 1;
+	required int64  Index        = 2;
+	required int64  Offset       = 3;
+	required int64  Size         = 4;
+	required int64  SessionId	 = 5;
+}

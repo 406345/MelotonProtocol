@@ -1,0 +1,6 @@
+message MessageDeleteFileACK
+{
+	required int32  Code    = 1;
+	required string Message = 2;
+	required string Path    = 3;
+}

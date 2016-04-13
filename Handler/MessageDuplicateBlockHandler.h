@@ -14,7 +14,7 @@ limitations under the License.
 ***********************************************************************************/
 
 /***********************************************************************************
-* Description   : MessageError handler.
+* Description   : MessageDuplicateBlock handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
 * Date          : 2016-04-13
 * Modifed       : 2016-04-13      | Shubo Yang      | Create
@@ -22,9 +22,9 @@ limitations under the License.
 
 #include <string>
 #include <MRT.h>
-#include <MessageError.pb.h>
+#include <MessageDuplicateBlock.pb.h>
 
-static int MessageErrorHandler( MRT::Session * session , uptr<MessageError> message )
+static int MessageDuplicateBlockHandler( MRT::Session * session , uptr<MessageDuplicateBlock> message )
 {
     return 0;
 }

@@ -1,0 +1,10 @@
+message MessageDuplicateBlock
+{
+	required string Token 		= 1;
+	required string Address 	= 2;
+	required int32	Port		= 3;
+	required int64  Index		= 4;
+	required int64  PartId	    = 5;
+	required int64  FileOffset  = 6;
+	required string Path        = 7;
+}

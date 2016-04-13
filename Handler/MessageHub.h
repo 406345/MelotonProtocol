@@ -15,8 +15,26 @@
 #include "MessageBlockList.pb.h"
 #include "MessageBlockMetaHandler.h"
 #include "MessageBlockMeta.pb.h"
+#include "MessageDeleteBlockHandler.h"
+#include "MessageDeleteBlock.pb.h"
+#include "MessageDeleteBlockACKHandler.h"
+#include "MessageDeleteBlockACK.pb.h"
+#include "MessageDeleteFileHandler.h"
+#include "MessageDeleteFile.pb.h"
+#include "MessageDeleteFileACKHandler.h"
+#include "MessageDeleteFileACK.pb.h"
+#include "MessageDuplicateBlockHandler.h"
+#include "MessageDuplicateBlock.pb.h"
+#include "MessageDuplicateDataHandler.h"
+#include "MessageDuplicateData.pb.h"
+#include "MessageDuplicateDataAcceptHandler.h"
+#include "MessageDuplicateDataAccept.pb.h"
+#include "MessageDuplicateDataRequestHandler.h"
+#include "MessageDuplicateDataRequest.pb.h"
 #include "MessageErrorHandler.h"
 #include "MessageError.pb.h"
+#include "MessageNewBlockHandler.h"
+#include "MessageNewBlock.pb.h"
 #include "MessageOpenACKHandler.h"
 #include "MessageOpenACK.pb.h"
 #include "MessageOpenFileHandler.h"
@@ -49,7 +67,7 @@ class MessageHub
 {
 private:
 
-    static size_t hash_name( std::string & name)
+    static size_t hash_name( std::string name)
     {
         size_t ret = 0;
         for (int i = 0; i < name.length(); i++)
@@ -113,11 +131,65 @@ public:
                 msg->ParseFromArray( data, msg_len );
                 return MessageBlockMetaHandler( session , std::move( std::unique_ptr<MessageBlockMeta>( msg ) ) );
             }break;
+        case 0x6F6D676577776F7F : 
+            {
+                auto msg = new MessageDeleteBlock( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDeleteBlockHandler( session , std::move( std::unique_ptr<MessageDeleteBlock>( msg ) ) );
+            }break;
+        case 0x6F6D676F77776F7F : 
+            {
+                auto msg = new MessageDeleteBlockACK( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDeleteBlockACKHandler( session , std::move( std::unique_ptr<MessageDeleteBlockACK>( msg ) ) );
+            }break;
+        case 0x6C6D676577776D7F : 
+            {
+                auto msg = new MessageDeleteFile( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDeleteFileHandler( session , std::move( std::unique_ptr<MessageDeleteFile>( msg ) ) );
+            }break;
+        case 0x6C6D67657F776D7F : 
+            {
+                auto msg = new MessageDeleteFileACK( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDeleteFileACKHandler( session , std::move( std::unique_ptr<MessageDeleteFileACK>( msg ) ) );
+            }break;
+        case 0x6575676B7B7F7D7F : 
+            {
+                auto msg = new MessageDuplicateBlock( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDuplicateBlockHandler( session , std::move( std::unique_ptr<MessageDuplicateBlock>( msg ) ) );
+            }break;
+        case 0x657567637B7F757F : 
+            {
+                auto msg = new MessageDuplicateData( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDuplicateDataHandler( session , std::move( std::unique_ptr<MessageDuplicateData>( msg ) ) );
+            }break;
+        case 0x657767637B7F757F : 
+            {
+                auto msg = new MessageDuplicateDataAccept( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDuplicateDataAcceptHandler( session , std::move( std::unique_ptr<MessageDuplicateDataAccept>( msg ) ) );
+            }break;
+        case 0x757567737B7F777F : 
+            {
+                auto msg = new MessageDuplicateDataRequest( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageDuplicateDataRequestHandler( session , std::move( std::unique_ptr<MessageDuplicateDataRequest>( msg ) ) );
+            }break;
         case 0x45656761737F777F : 
             {
                 auto msg = new MessageError( );
                 msg->ParseFromArray( data, msg_len );
                 return MessageErrorHandler( session , std::move( std::unique_ptr<MessageError>( msg ) ) );
+            }break;
+        case 0x4E6F676F7F73776F : 
+            {
+                auto msg = new MessageNewBlock( );
+                msg->ParseFromArray( data, msg_len );
+                return MessageNewBlockHandler( session , std::move( std::unique_ptr<MessageNewBlock>( msg ) ) );
             }break;
         case 0x4F656F63737F657F : 
             {

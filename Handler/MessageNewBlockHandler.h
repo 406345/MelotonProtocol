@@ -14,7 +14,7 @@ limitations under the License.
 ***********************************************************************************/
 
 /***********************************************************************************
-* Description   : MessageError handler.
+* Description   : MessageNewBlock handler.
 * Creator       : Shubo Yang(shuboyang@yhgenomics.com)
 * Date          : 2016-04-13
 * Modifed       : 2016-04-13      | Shubo Yang      | Create
@@ -22,9 +22,9 @@ limitations under the License.
 
 #include <string>
 #include <MRT.h>
-#include <MessageError.pb.h>
+#include <MessageNewBlock.pb.h>
 
-static int MessageErrorHandler( MRT::Session * session , uptr<MessageError> message )
+static int MessageNewBlockHandler( MRT::Session * session , uptr<MessageNewBlock> message )
 {
     return 0;
 }

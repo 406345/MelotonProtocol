@@ -1,0 +1,5 @@
+message MessageDeleteBlock
+{
+	required int64 Index     = 1;
+	required int64 ClientId  = 2;
+}

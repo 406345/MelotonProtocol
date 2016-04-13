@@ -1,0 +1,9 @@
+message MessageDeleteBlockACK
+{
+	required int32   Code      = 1;
+	required string  Message   = 2;
+	required int64   ClientId  = 3;
+	required int64   Index     = 4;
+	required string  Path	   = 5;
+	required int64   PartId	   = 6;
+}

@@ -1,0 +1,10 @@
+message MessageNewBlock
+{
+	required int32  Status      = 1;
+    required string Path        = 2;
+    required int64  Size        = 3;
+    required int64  PartId      = 4;
+    required int64  Index       = 5;
+    required int64  FileOffset  = 6;
+	required string Token		= 7;
+}
